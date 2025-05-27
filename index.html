@@ -4,54 +4,81 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>wedding fuss</title>
+<!-- Подключение современного шрифта -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 <style>
+  /* Общие стили */
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #fef6f6;
+    background-color: #f0f4f8; /* мягкий светлый фон в стиле 2025 */
+    color: #333;
     line-height: 1.6;
   }
 
 h1, h2 {
   text-align: center;
-  color: #b22222;
+  color: #4a5568; /* нейтральный темный оттенок */
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.8em;
 }
 
 .section {
   margin-bottom: 30px;
-  padding: 15px;
-  background-color: #fff0f5;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  background-color: #ffffff; /* светлый фон для секций */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
+/* Кнопки */
 button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 1em;
-  background-color: #b22222;
+  background-color: #6b46c1; /* мягкий фиолетовый оттенок */
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #8b1a1a;
+  background-color: #553c9a; /* чуть темнее при наведении */
+}
+
+/* Вводы */
+input[type="date"],
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
 }
 
 /* Адаптивность */
 @media(max-width:600px) {
   body {
     padding:10px;
-  }
+    font-size:14px;
+}
   
-  button {
+button {
     width:100%;
     font-size:1.2em;
     padding:14px;
     margin-top:10px;
-  }
+}
 }
 </style>
 </head>
@@ -59,10 +86,7 @@ button:hover {
 
 <h1>wedding fuss</h1>
 
-<!-- Ссылка на сайт -->
-<div class="section" style="text-align:center;">
-<a href="https://wedding.fuss.com" target="_blank" style="font-size:1.2em; font-weight:bold;">wedding.fuss.com</a>
-</div>
+<!-- Удалена ссылка на сайт -->
 
 <!-- Блок выбора даты -->
 <div class="section">
