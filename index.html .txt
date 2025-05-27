@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Планировщик свадьбы</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fef6f6;
+    line-height: 1.6;
+  }
+
+h1, h2 {
+  text-align: center;
+  color: #b22222;
+}
+
+.section {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #fff0f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8b1a1a;
+}
+
+/* Адаптивность */
+@media(max-width:600px) {
+  body {
+    padding:10px;
+  }
+  
+  button {
+    width:100%;
+    font-size:1.2em;
+    padding:14px;
+    margin-top:10px;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Планировщик свадьбы</h1>
+
+<!-- Блок выбора даты -->
+<div class="section">
+<h2>Выберите дату свадьбы:</h2>
+<input type="date" id="weddingDate" />
+<button onclick="showDate()">Показать выбранную дату</button>
+<p id="dateDisplay"></p>
+</div>
+
+<!-- Список дел -->
+<div class="section">
+<h2>Список дел</h2>
+<input type="text" id="taskInput" placeholder="Введите задачу" />
+<button onclick="addTask()">Добавить задачу</button>
+<ul id="taskList"></ul>
+</div>
+
+<!-- Советы -->
+<div class="section">
+<h2>Советы по подготовке</h2>
+<ul>
+<li>Начинайте подготовку заранее.</li>
+<li>Обсуждайте все детали с партнером.</li>
+<li>Создайте список гостей и рассчитайте бюджет.</li>
+<li>Выберите место проведения и закажите услуги заранее.</li>
+<li>Не забывайте о мелочах — украшениях, фотографах и т.д.</li>
+</ul>
+</div>
+
+<script>
+// Функция отображения выбранной даты
+function showDate() {
+	const date = document.getElementById('weddingDate').value;
+	if(date) {
+		document.getElementById('dateDisplay').innerText = 'Запланированная дата: ' + date;
+	} else {
+		document.getElementById('dateDisplay').innerText = 'Пожалуйста, выберите дату.';
+	}
+}
+
+// Функции для списка дел
+function addTask() {
+	const taskInput = document.getElementById('taskInput');
+	const taskText = taskInput.value.trim();
+	if(taskText === "") {
+		alert("Пожалуйста, введите задачу");
+		return;
+	}
+	const li = document.createElement('li');
+	li.innerText = taskText;
+
+	// Добавляем кнопку удаления задачи
+	const delBtn = document.createElement('button');
+	delBtn.innerText = "Удалить";
+	delBtn.style.marginLeft = "10px";
+	delBtn.onclick = function() {
+		this.parentElement.remove();
+	};
+	
+	li.appendChild(delBtn);
+	document.getElementById('taskList').appendChild(li);
+	taskInput.value = "";
+}
+</script>
+
+</body>
+</html>
