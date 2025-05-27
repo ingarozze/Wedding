@@ -17,76 +17,116 @@
     line-height: 1.6;
   }
 
-h1, h2 {
-  text-align: center;
-  color: #4a5568; /* нейтральный темный оттенок */
-}
-
 h1 {
+  text-align: center;
+  color: #4a5568;
   font-weight: 600;
   font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
 h2 {
+  text-align: center;
+  color: #4a5568;
   font-weight: 600;
   font-size: 1.8em;
+  margin-bottom: 15px;
 }
 
+/* Общие стили для разделов с фоном */
 .section {
   margin-bottom: 30px;
   padding: 20px;
-  background-color: #ffffff; /* светлый фон для секций */
+  background-color: rgba(255,255,255,0.8); /* полупрозрачный фон для читаемости */
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
+/* Фоновые изображения для каждого раздела по классам */
+.section.lokats {
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+}
+.section.nevesty {
+    background-image: url('https://images.unsplash.com/photo-1520974739277-7b7d9d7e9b3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+}
+.section.jenixa {
+    background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+}
+.section.gosti {
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+}
+.section.agencies {
+    background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+}
+.section.catering {
+    background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position:center; 
+}
+.section.cars {
+    background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size:cover; 
+}
+.section.registration {
+   /* Можно оставить без фона или добавить свой */
+   background-color:#fff; 
+   opacity:.9; 
+}
+
+/* Заголовки внутри разделов */
+.section h2 {
+  margin-top:auto; 
+}
+
 /* Кнопки */
 button {
-  padding: 12px 24px;
-  font-size: 1em;
-  background-color: #6b46c1; /* мягкий фиолетовый оттенок */
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding:12px 24px;
+  font-size:.9em; 
+  background-color:#6b46c1; 
+  color:#fff; 
+  border:none; 
+  border-radius:8px; 
+  cursor:pointer; 
+ transition:.3s all ease; 
 }
 
 button:hover {
-  background-color: #553c9a; /* чуть темнее при наведении */
+background-color:#553c9a; 
 }
 
 /* Вводы */
 input[type="date"],
 input[type="text"] {
-  width: calc(100% - 20px);
-  padding:10px;
-  margin-top:10px;
-  border-radius:8px;
-  border:1px solid #ccc;
+ width:auto; 
+ max-width:auto; 
+ padding:10px; 
+ margin-top:10px; 
+ border-radius:8px; 
+ border:none; 
+ box-shadow:none;  
 }
 
-/* Адаптивность */
-@media(max-width:600px) {
-  body {
-    padding:10px;
-    font-size:14px;
-}
-  
-button {
-    width:100%;
-    font-size:1.2em;
-    padding:14px;
-    margin-top:10px;
-}
-}
+/* Список гостей и карточки */
+.card-list {
+   display:flex; flex-wrap:flex-wrap; gap:15px; justify-content:center; }
+.card { flex-basis:auto; min-width:200px; max-width:auto; padding:15px; border-radius:10px; box-shadow:.05em .05em .2em rgba(0,0,0,.05);background:#fff;}
+h3 {margin-top:auto;font-size:.9em;margin-bottom:.5em;}
+p {font-size:.8em;}
 </style>
 </head>
 <body>
 
 <h1>wedding fuss</h1>
-
-<!-- Удалена ссылка на сайт -->
 
 <!-- Блок выбора даты -->
 <div class="section">
@@ -96,12 +136,71 @@ button {
 <p id="dateDisplay"></p>
 </div>
 
-<!-- Список дел -->
-<div class="section">
-<h2>Список дел</h2>
-<input type="text" id="taskInput" placeholder="Введите задачу" />
-<button onclick="addTask()">Добавить задачу</button>
-<ul id="taskList"></ul>
+<!-- Раздел "Локации" -->
+<div class="section lokats">
+<h2>Локации</h2>
+<div class="card-list">
+<div class="card"><h3>Места проведения</h3><p>Добавьте описание или список мест.</p></div>
+</div>
+</div>
+
+<!-- Раздел "Всё для невесты" -->
+<div class="section nevesty">
+<h2>Всё для невесты</h2>
+<div class="card-list">
+<div class="card"><h3>Обувь и платье</h3><p>Подбор и советы по выбору.</p></div>
+</div>
+</div>
+
+<!-- Раздел "Всё для жениха" -->
+<div class="section jenixa">
+<h2>Всё для жениха</h2>
+<div class="card-list">
+<div class="card"><h3>Костюмы и аксессуары</h3><p>Идеи и рекомендации.</p></div>
+</div>
+</div>
+
+<!-- Раздел "Список гостей" -->
+<div class="section gosti">
+<h2>Список гостей</h2>
+<input type="text" id="guestInput" placeholder="Добавьте гостя" />
+<button onclick="addGuest()">Добавить гостя</button>
+<ul id="guestList"></ul>
+</div>
+
+<!-- Раздел "Свадебные агентства" -->
+<div class="section agencies">
+<h2>Свадебные агентства</h2>
+<div class="card-list">
+<div class="card"><h3>Агентство А</h3><p>Контакты и услуги.</p></div>
+<div class="card"><h3>Агентство Б</h3><p>Контакты и услуги.</p></div>
+<!-- Можно добавить больше карточек -->
+</div>
+</div>
+
+<!-- Раздел "Кейтеринг" -->
+<div class="section catering">
+<h2>Кейтеринг</h2>
+<div class="card-list">
+<div class="card"><h3>Поставщик X</h3><p>Меню и контакты.</p></div>
+<!-- Можно добавить больше карточек -->
+</div>
+</div>
+
+<!-- Раздел "Автомобили" -->
+<div class="section cars">
+<h2>Автомобили</h2>
+<div class="card-list">
+<div class="card"><h3>Автопрокат Y</h3><p>Модели и цены.</p></div>
+<!-- Можно добавить больше карточек -->
+</div>
+</div>
+
+<!-- Раздел "Регистрация свадьбы" -->
+<div class="section registration">
+<h2>Регистрация свадьбы</h2>
+<p>Информация о регистрации, документы и процедуры.</p>
+<!-- Можно добавить форму или инструкции -->
 </div>
 
 <!-- Советы -->
@@ -127,28 +226,25 @@ function showDate() {
 	}
 }
 
-// Функции для списка дел
-function addTask() {
-	const taskInput = document.getElementById('taskInput');
-	const taskText = taskInput.value.trim();
-	if(taskText === "") {
-		alert("Пожалуйста, введите задачу");
+// Список гостей
+function addGuest() {
+	const guestInput = document.getElementById('guestInput');
+	const guestName = guestInput.value.trim();
+	if(guestName === "") {
+		alert("Пожалуйста, введите имя гостя");
 		return;
 	}
 	const li = document.createElement('li');
-	li.innerText = taskText;
+	li.innerText = guestName;
 
-	// Добавляем кнопку удаления задачи
 	const delBtn = document.createElement('button');
 	delBtn.innerText = "Удалить";
 	delBtn.style.marginLeft = "10px";
-	delBtn.onclick = function() {
-		this.parentElement.remove();
-	};
+	delBtn.onclick = function() { this.parentElement.remove(); };
 	
 	li.appendChild(delBtn);
-	document.getElementById('taskList').appendChild(li);
-	taskInput.value = "";
+	document.getElementById('guestList').appendChild(li);
+	guestInput.value="";
 }
 </script>
 
