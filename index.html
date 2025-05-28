@@ -3,12 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Идеальный сайт</title>
+
+<title>Идеальный сайт + Wedding</title>
+
+<!-- Метаданные для SEO -->
 <meta name="description" content="Описание вашего сайта для поисковых систем" />
 <meta name="keywords" content="ключевые слова, для SEO" />
 <meta name="author" content="Ваше имя или компания" />
 
-<!-- Open Graph для соцсетей -->
+<!-- Open Graph -->
 <meta property="og:title" content="Идеальный сайт" />
 <meta property="og:description" content="Описание вашего сайта для соцсетей" />
 <meta property="og:type" content="website" />
@@ -18,38 +21,29 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 
-<!-- Подключение стилей -->
-<link rel="stylesheet" href="styles.css" />
-
-<!-- Иконки соцсетей -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-<!-- Google Fonts (оптимизация загрузки) -->
+<!-- Шрифты -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Иконки соцсетей -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-/* Общие стили */
+/* Общие стили из обоих шаблонов */
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  background-color: #f0f4f8; /* стиль первого */
   color: #333;
-  background-color: #f4f4f4;
+  line-height: 1.6;
 }
 
-/* Контейнеры */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Хедер */
+/* Шапка */
 header {
-  background-color: #222;
+  background-color: #222; /* из второго */
   padding: 20px 0;
 }
 .header-container {
@@ -58,119 +52,66 @@ header {
   align-items: center;
 }
 .logo a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 24px;
+  color:#fff; font-size:24px; text-decoration:none;
 }
 nav ul.menu {
-  list-style: none;
-  display: flex;
-  gap: 15px;
+  list-style:none; display:flex; gap:15px;
 }
 nav ul.menu li a {
-  color: #fff;
-  text-decoration: none;
+  color:#fff; text-decoration:none;
 }
 nav ul.menu li a:hover {
-  text-decoration: underline;
+  text-decoration:underline;
 }
 
 /* Основные секции */
 .section {
-  padding: 60px 0;
+  margin-bottom:30px; padding:20px; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.05);
 }
+
+/* Стиль для свадебных разделов (фоновые изображения) */
+.section.lokats { background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); background-size:cover; background-position:center;}
+.section.nevesty { background-image:url('https://images.unsplash.com/photo-1520974739277-7b7d9d7e9b3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); background-size:cover; background-position:center;}
+.section.jenixa { background-image:url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); background-size:cover; background-position:center;}
+.section.gosti { background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); background-size:cover; background-position:center;}
+.section.agencies { background-image:url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); background-size:cover; background-position:center;}
+.section.catering { background-image:url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); background-size:cover; }
+.section.cars { background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); background-size:cover;}
+
 h2 {
-  text-align: center;
-  margin-bottom: 20px;
+  text-align:center;
+  margin-bottom:15px;
 }
 p {
-  max-width:600px;
-  margin:auto;
+  max-width:600px; margin:auto;
 }
 
 /* Кнопки */
-.btn-primary {
-  display:inline-block;
-  background-color:#007BFF;
-  color:#fff;
-  padding:10px20px;
+button, .btn-primary {
+  padding:12px 24px;
+  font-size:.9em;
   border:none;
-  border-radius:4px;
-  text-decoration:none;
+  border-radius:8px;
 }
-.btn-primary:hover {
-    background-color:#0056b3;
+button:hover, .btn-primary:hover {
+    opacity:.9;
 }
-
-/* Услуги список */
-.services-list {
-    display:flex; 
-    justify-content:center; 
-    gap:20px; 
-    list-style:none; 
-    flex-wrap:wrap; 
-    padding-left:0; 
-}
-.services-list li {
-    display:flex; 
-    flex-direction:column; 
-    align-items:center; 
-    width:auto; 
-}
-.services-list img {
-    width:150px; 
-    height:auto; 
-    border-radius:8px; 
-}
-.services-list span {
-    margin-top:10px; 
+.btn-primary {
+  background-color:#6b46c1; color:#fff; cursor:pointer; transition:.3s all ease;
 }
 
-/* Контакты и карта */
-.contacts-info p {
-    margin-bottom:10px; 
-}
-iframe {
-    margin-top:20px; 
-    border-radius:8px; 
-}
+/* Карточки и списки */
+.card-list { display:flex; flex-wrap:flex-wrap; gap:15px; justify-content:center;}
+.card { flex-basis:auto; min-width:200px; padding:15px; border-radius:10px; box-shadow:.05em .05em .2em rgba(0,0,0,.05);background:#fff;}
+h3 {margin-top:auto;font-size:.9em;margin-bottom:.5em;}
+p {font-size:.8em;}
 
-/* Социальные сети */
-.social-icons {
-    margin-top:20px; 
-    display:flex; 
-    gap:15px; 
-    justify-content:center; 
-}
-.social-icons a {
-    color:#555; 
-    font-size:24px; 
-    transition:.3s ease-in-out; 
-}
-.social-icons a:hover {
-    color:#000; 
-}
-
-/* Отзывы */
-#reviews blockquote {
-    max-width:800px; 
-    margin:auto; 
-    font-style:none; /* убираем курсив по желанию */  
-    font-size:1.2em;  
-    padding-left:20px;  
-}
-/* Футер */
-footer {
-background-color:#222;color:#fff;padding:20px;margin-top:auto;text-align:center;}
-footer a {color:#fff;text-decoration:none;}
-footer a:hover {text-decoration underline;}
 </style>
-
 </head>
 <body>
 
 <header>
-<div class="container header-container">
+<div class='container header-container'>
 <h1 class='logo'><a href="#">Мой сайт</a></h1>
 <nav>
 <ul class='menu'>
@@ -178,6 +119,7 @@ footer a:hover {text-decoration underline;}
 <li><a href="#about">О нас</a></li>
 <li><a href="#services">Услуги</a></li>
 <li><a href="#contact">Контакты</a></li>
+<li><a href="#wedding">Свадьба</a></li> <!-- добавим раздел свадьбы -->
 </ul>
 </nav>
 </div>
@@ -221,9 +163,6 @@ footer a:hover {text-decoration underline;}
 
 <!-- Форма обратной связи -->
 <form action="/submit-form" method="POST" id='contact-form'>
-<!-- Защита от CSRF — реализуйте на сервере (например, токен) -->
-<!--<input type='hidden' name='_csrf' value='TOKEN'>-->
-
 <label for='name'>Имя:</label>
 <input type='text' id='name' name='name' required maxlength='50' />
 
@@ -233,10 +172,6 @@ footer a:hover {text-decoration underline;}
 <label for='message'>Сообщение:</label>
 <textarea id='message' name='message' required maxlength='2000'></textarea>
 
-<!-- CAPTCHA (пример) -->
-<!--<div class=\"g-recaptcha\" data-sitekey=\"ВАШ_КЛЮЧ\"></div>-->
-  
-<!-- Кнопка отправки -->
 <button type='submit' class='btn-primary'>Отправить</button>
 </form>
 
@@ -245,74 +180,38 @@ footer a:hover {text-decoration underline;}
 <p>Телефон: +7 (123) 456-78-90</p>
 <p>Email: info@mysite.ru</p>
 
-<!-- Встроенная карта Google Maps с lazy loading -->
-<iframe src=\"https://www.google.com/maps/embed?pb=...\" width=\"100%\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>
-</div>
+<iframe src=\"https://www.google.com/maps/embed?pb=...\" width=\"100%\" height=\"300\" style=\"border:none\" allowfullscreen="" loading=\"lazy\"></iframe>
 
-<!-- Социальные сети с aria-label для доступности -->
+<!-- Социальные сети -->
 <div class=\"social-icons\">
 <a href=\"#\" aria-label=\"Facebook\"><i class=\"fab fa-facebook-f\"></i></a>
 <a href=\"#\" aria-label=\"Instagram\"><i class=\"fab fa-instagram\"></i></a>
 <a href=\"#\" aria-label=\"Twitter\"><i class=\"fab fa-twitter\"></i></a>
 </div>
 
+</div></div></section>
+
+<!-- Новая секция "Свадьба", объединенная с вашим первым шаблоном -->
+<section id="wedding" class="section lokats">
+<h2>Планирование свадьбы</h2>
+
+<!-- Внутри можно вставлять любой контент по вашему желанию -->
+
+<div style="max-width:800px;margin:auto;">
+<h3>Выберите дату свадьбы:</h3>
+<input type="date" id="weddingDate"/>
+<button onclick="showDate()">Показать выбранную дату</button>
+<p id="dateDisplay"></p>
+
+<h3>Локации проведения:</h3>
+<div class="card-list">
+<div class="card"><h3>Места проведения свадьбы A</h3><p>Описание места A.</p></div>
+<div class="card"><h3>Места проведения свадьбы B</h3><p>Описание места B.</p></div>
+<!-- добавьте свои места -->
 </div>
-</section>
 
-<!-- Отзывы клиентов (доверие) -->
-<section id=\"reviews\" class=\"section\">
-<div class=\"container\">
-<h2>Отзывы наших клиентов</h2>
+<h3>Всё для невесты:</h3>
+<div class="card-list">
+<div class="card"><h3>Обувь и платье невесты </h3><p>Подбор и советы по выбору.</p></div></div>
 
-<blockquote>«Отличная компания! Очень доволен результатом.»</blockquote>
-
-</div>
-</section>
-
-</main>
-
-<!-- Подвал сайта -->
-<footer>
-<div class=\"container footer-container\">
-&copy;2024 Мой сайт. Все права защищены.
-<p><a href=\"#privacy\">Политика конфиденциальности</a></p>
-
-<!-- Скрипты аналитики (Google Analytics) - вставьте свой код сюда для отслеживания посещений --> 
-<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X\"></script>
-<script>
-// Инициализация Google Analytics
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'UA-XXXXXX-X');
-</script>
-
-<!-- Важно, что все внешние скрипты подключены по HTTPS -->
-
-</div>
-</footer>
-
-<!-- Скрипты для отправки формы через AJAX -->
-<script>
-// Обработчик отправки формы
-document.getElementById('contact-form').addEventListener('submit', function(e){
-e.preventDefault();
-
-const formData = new FormData(this);
-
-fetch('/submit-form', {
-method:'POST',
-body : formData,
-headers:{ 'Accept':'application/json'}
-})
-.then(response => response.json())
-.then(data => { alert('Спасибо за ваше сообщение!'); this.reset();})
-.catch(error => { alert('Произошла ошибка. Попробуйте позже.'); console.error(error);});
-});
-</script>
-
-<!-- Можно подключить дополнительные скрипты или библиотеки по необходимости -->
-
-<!-- Конец документа -->
-</body>
-</html>
+<h3>
