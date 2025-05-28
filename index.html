@@ -3,12 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Wedding Fuss</title>
-
-<!-- Метаданные для SEO -->
-<meta name="description" content="Каталог свадебных товаров и услуг от Wedding Fuss" />
-<meta name="keywords" content="свадьба, каталог, товары, услуги, свадьба 2024" />
+<title>Wedding Fuss 2024</title>
+<meta name="description" content="Лучшие свадебные товары и услуги" />
 <meta name="author" content="Wedding Fuss" />
 
 <!-- Open Graph -->
@@ -21,7 +17,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 
-<!-- Шрифты (используем шрифт из референса) -->
+<!-- Шрифты -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
@@ -35,106 +31,96 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Playfair Display', serif;
-  background: #fff; /* убран серый фон */
-  color: #222;
+  background-color: #121212; /* темный фон */
+  color: #fff;
 }
 
-/* Название сайта по центру */
+/* Заголовок сайта по центру */
 .header-title {
   text-align: center;
   font-size: 3em;
   margin: 30px 0;
   font-family: 'Playfair Display', serif;
+  color: #ffd700; /* теплый желтый цвет */
 }
 
-/* Навигация по разделам */
-.nav-links {
-    display:flex; justify-content:center; gap:20px; margin-bottom:40px; flex-wrap:wrap;
-}
-.nav-links a {
-   text-decoration:none;font-weight:bold;color:#222;padding:8px;border-radius:4px; font-family:'Montserrat', sans-serif; font-weight:600; font-size:1em;
-}
-.nav-links a:hover {background-color:#f0f0f0;}
+/* Навигация по разделам - убрана, так как вы просили убрать категории */
 
 /* Основной контент */
 main {
-    padding:20px;
+  padding: 20px;
 }
 
 /* Разделы */
 section {
-    margin-bottom:50px;
+  margin-bottom: 50px;
 }
+
+/* Заголовки разделов */
 section h2 {
-    font-size:2em;
-    text-align:center;
-    margin-bottom:20px;
-    position:relative;
-    font-family:'Playfair Display', serif;
-}
-section h2 small {
-    font-size:.6em;
-    display:block;
-    margin-top:.5em;
-    color:#555;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  font-family:'Playfair Display', serif;
+  color:#ffd700; /* теплый желтый для заголовков */
 }
 
-/* Галерея разделов (фотографии) */
-.section-gallery {
-    display:flex; flex-wrap:wrap; justify-content:center; gap:20px;
-}
-.section-gallery img {
-    width:auto; max-width:400px; height:auto; border-radius:12px; object-fit:cover; box-shadow:-2px 4px 15px rgba(0,0,0,0.2);
-}
-
-/* Каталог товаров (пример) */
-.catalog-grid {
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
+/* Карточки разделов (большие) */
+.section-card-container {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
 }
 
-.card-3d-container {
-    width:300px;
+.section-card {
+  width:300px;
+  background-color:#222; /* темный фон карточки */
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:-2px 4px 15px rgba(255,215,0,0.3); /* подсветка желтым */
+  transition:.3s transform, box-shadow;
+}
+.section-card:hover {
+  transform: scale(1.02);
+  box-shadow:-4px 8px 25px rgba(255,215,0,0.5);
 }
 
-.card-3d {
+/* Фото внутри карточки */
+.section-card img {
     width:100%;
-    background:#fff;
-    border-radius:12px;
-    box-shadow:-2px 4px 15px rgba(0,0,0,0.2);
-    overflow:hidden;
-
-    transition:.5s transform ease-in-out, box-shadow .3s ease-in-out;
-
-}
-.card-3d:hover {
-   transform:
-     rotateY(10deg)
-     rotateX(5deg);
-   box-shadow:-4px 8px 25px rgba(0,0,0,0.3);
+    height:auto;
+    display:block;
+    object-fit:cover;
 }
 
-.card-image {
-   width:auto; 
-   height:auto; 
-   max-height:200px; 
-   object-fit:cover; 
-   display:block; 
-   margin:auto;}
-   
-/* Контент карточки */
+/* Контент внутри карточки */
 .card-content {
-   padding:15px;text-align:center;}
+    padding:15px;
+    text-align:center;
+}
 .card-title {
-   font-size:.9em;font-weight:bold;margin-bottom:.5em;}
-.card-desc {font-size:.8em;margin-bottom:.5em;}
-.card-price {font-size:.9em;color:#0077cc;font-weight:bold;margin-bottom:.10em;}
-
+    font-size:.9em;
+    font-weight:bold;
+    margin-bottom:.5em;
+}
+.card-desc {
+    font-size:.8em;
+    margin-bottom:.5em;
+}
 button.btn-primary {
-   padding:12px 24px;font-size:.9em;border:none;border-radius:8px;background-color:#87cefa;color:#fff;cursor:pointer;transition:.3s all ease;}
+   padding:12px 24px;
+   font-size:.9em;
+   border:none;
+   border-radius:8px;
+   background-color:#ffd700; /* теплый желтый для кнопок */
+   color:#222; /* темный текст на кнопке */
+   cursor:pointer; 
+   transition:.3s all ease;}
 button.btn-primary:hover {opacity:.9;}
+
+/* Общий стиль карточек товаров (если есть) - можно оставить или убрать */
 
 </style>
 </head>
@@ -143,96 +129,98 @@ button.btn-primary:hover {opacity:.9;}
 <!-- Заголовок сайта -->
 <div class='header-title'>Wedding Fuss</div>
 
-<!-- Навигация по разделам -->
-<div class='nav-links'>
-<a href="#ceremonies">Церемонии</a>
-<a href="#decor">Декор</a>
-<a href="#photoshoots">Фотосессии</a>
-<a href="#bridegroom">Жених</a>
-<a href="#bride">Невеста</a>
-<a href="#catering">Кейтеринг</a>
-<a href="#location">Локация</a>
-<a href="#transport">Транспорт</a>
-<a href="#services">Услуги</a>
-</div>
+<!-- Навигация убрана по вашему запросу -->
 
 <main>
 
-<!-- Главный раздел -->
-<section id='home' class='section'>
-<h2>Добро пожаловать в Wedding Fuss!</h2>
-<p style='text-align:center;'>Лучшие свадебные товары и услуги для вашего особенного дня.</p>
+<!-- Раздел "Категории" заменен на разделы с большими карточками -->
+<section id='ceremonies' class='section'>
+<h2>Церемонии</h2>
+<div class='section-card-container'>
+<div class='section-card'>
+<a href="#ceremonies"><img src='https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Церемонии'></a>
+<div class='card-content'>
+<div class='card-title'>Организация церемоний</div>
+<p class='card-desc'>Планирование и проведение свадебных церемоний и ритуалов.</p>
+<a href="#ceremonies"><button class='btn-primary'>Подробнее</button></a>
+</div>
+</div>
+
+<!-- Можно добавить еще карточки по необходимости -->
+</div>
 </section>
 
-<!-- Категории -->
-<section id='catalog' class='section'>
-<h2>Наши категории</h2>
-<div class='catalog-grid'>
-
-<!-- Церемонии -->
-<div class='card-3d-container'>
-<div class='card-3d'>
-<a href="#ceremonies"><img src='https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Церемонии' class='card-image'></a>
+<section id='decor' class='section'>
+<h2>Декор</h2>
+<div class='section-card-container'>
+<div class='section-card'>
+<a href="#decor"><img src='https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Декор'></a>
 <div class='card-content'>
-<div class='card-title'>Церемонии</div>
-<p class='card-desc'>Организация церемоний и ритуалов.</p>
-<a href="#ceremonies"><button class='btn-primary'>Подробнее</button></a>
-</div></div></div>
-
-<!-- Декор -->
-<div class='card-3d-container'>
-<div class='card-3d'>
-<a href="#decor"><img src='https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Декор' class='card-image'></a>
-<div class='card-content'>
-<div class='card-title'>Декор</div>
-<p class='card-desc'>Украшения и оформление пространства.</p>
+<div class='card-title'>Украшения и оформление</div>
+<p class='card-desc'>Создайте уникальную атмосферу с помощью декора.</p>
 <a href="#decor"><button class='btn-primary'>Подробнее</button></a>
-</div></div></div>
+</div>
+</div>
+</div>
+</section>
 
-<!-- Фото для раздела "Жених" -->
-<div class='card-3d-container'>
-<div class='card-3d'>
-<a href="#bridegroom"><img src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Жених' class='card-image'></a>
+<section id='bridegroom' class='section'>
+<h2>Жених</h2>
+<div class='section-card-container'>
+<div class='section-card'>
+<a href="#bridegroom"><img src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Жених'></a>
 <div class='card-content'>
-<div class='card-title'>Жених</div>
+<div class='card-title'>Образы и аксессуары</div>
 <p class='card-desc'>Стильные образы и аксессуары для жениха.</p>
 <a href="#bridegroom"><button class='btn-primary'>Подробнее</button></a>
-</div></div></div>
+</div>
+</div>
+</div>
+</section>
 
-<!-- Фото для раздела "Невеста" -->
-<div class='card-3d-container'>
-<div class='card-3d'>
-<a href="#bride"><img src='https://images.unsplash.com/photo-1520974739277-7b7d9d7e9b3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Невеста' class='card-image'></a>
+<section id='bride' class='section'>
+<h2>Невеста</h2>
+<div class='section-card-container'>
+<div class='section-card'>
+<a href="#bride"><img src='https://images.unsplash.com/photo-1520974739277-7b7d9d7e9b3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Невеста'></a>
 <div class='card-content'>
-<div class='card-title'>Невеста</div>
-<p class='card-desc'>Платья и аксессуары для невесты.</p>
+<div class='card-title'>Платья и аксессуары</div>
+<p class='card-desc'>Красивые платья и украшения для невесты.</p>
 <a href="#bride"><button class='btn-primary'>Подробнее</button></a>
+</div>
 </div></div></div>
 
-<!-- Фото для раздела "Кейтеринг" -->
-<div class='card-3d-container'>
-<div class='card-3d'>
-<a href="#catering"><img src='https://images.unsplash.com/photo-1606788075761-cf7b7c8e6fbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Кейтеринг' class='card-image'></a>
+<section id='catering' class='section'>
+<h2>Кейтеринг</h2>
+<div class='section-card-container'>
+<div class='section-card'>
+<a href="#catering"><img src='https://images.unsplash.com/photo-1606788075761-cf7b7c8e6fbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Кейтеринг'></a>
 <div class='card-content'>
-<div class='card-title'>Кейтеринг</div>
-<p class='card-desc'>Питание и напитки на свадьбе.</p>
+<div class='card-title'>Питание и напитки</div>
+<p class='card-desc'>Вкусное питание для вашего праздника.</p>
 <a href="#catering"><button class='btn-primary'>Подробнее</button></a>
-</div></div></div>
+</div></div></div></div>
 
-<!-- Фото для раздела "Локация" -->
-<div class='card-3d-container'>
-<div class='card-3d'>
-<a href="#location"><img src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Локация' class='card-image'></a>
+<section id='location' class='section'>
+<h2>Локация</h2>
+<div class='section-card-container'>
+<div class='section-card'>
+<a href="#location"><img src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Локация'></a>
 <div class='card-content'>
-<div class='card-title'>Локация</div>
-<pclass>Выбор идеального места проведения свадьбы.</pclass> <!-- исправлено тегом p -->
+<div class='card-title'>Выбор места проведения свадьбы</div>
+<pclass>Идеальное место для вашего торжества.</pclass> <!-- исправлено тегом p -->
 <a href="#location"><buttonclass ='btn-primary'>Подробнее</button></a> <!-- исправлено тегом a и button без пробелов -->
-</div></div></div>
+</div></div></div></div>
 
-<!-- Фото для раздела "Транспорт" -->
-<divclass ='card-3d-container'>
- <divclass ='card -3d ' >
+<section id='#transport' class ='section'>
+<h2>Транспорт</h2>
+<div class ='section-card-container'>
+ <divclass ='section-card' >
  <ahref ="#transport"><img src ='https://images.unsplash.com/photo -1549924231 -f129b911e442?ixlib = rb -4 .0 .3 & auto = format & fit = crop & w =800 & q =80'"alt ='Транспорт'class =' card-image ' ></a >
  < divclass =' card -content ' >
  < divclass =' card -title ' > Транспорт </ div >
  < pclass =' card -desc ' > Элегантный транспорт для особых случаев
+ </ p >
+ </ div >
+ </ div >
+ </ div >
