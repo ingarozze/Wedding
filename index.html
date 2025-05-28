@@ -3,307 +3,270 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Wedding Fuss 2024</title>
-<meta name="description" content="Лучшие свадебные товары и услуги" />
-<meta name="author" content="Wedding Fuss" />
-
-<!-- Open Graph -->
-<meta property="og:title" content="Wedding Fuss" />
-<meta property="og:description" content="Лучшие свадебные товары и услуги" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://weddingfuss.ru/" />
-<meta property="og:image" content="https://weddingfuss.ru/images/preview.jpg" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-
-<!-- Шрифты -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Шрифт для названия сайта -->
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-<!-- Шрифт для карточек -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-<!-- Иконки соцсетей -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+<title>Wedding Fuss</title>
+<!-- Подключение современного шрифта -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 <style>
-/* Общие стили */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif; /* основной шрифт для текста */
-  background-color: #d0d7e3; /* цвет "cloud dancer", замените при необходимости */
-  color: #fff;
-}
+  /* Общие стили */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+  }
 
-/* Заголовок сайта */
-.header-title {
+h1 {
   text-align: center;
-  font-family: 'Anton', sans-serif; /* шрифт для названия сайта */
-  font-size: 3em;
-  margin: 30px 0;
-  color: #ffd700; /* теплый желтый цвет */
-  letter-spacing:2px;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-/* Навигация - стрелки */
-.nav-arrows {
-  position: relative;
-  width: 100%;
-  height: 150px;
-}
-.arrow {
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-  font-size:3em;
-  color: rgba(173,216,230,0.5); /* нежно голубой полупрозрачный */
-  cursor:pointer;
-  z-index:10;
-}
-.arrow-left {
-  left:10px;
-}
-.arrow-right {
-  right:10px;
+h2 {
+  text-align: center;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 1.8em;
+  margin-bottom: 15px;
 }
 
-/* Основной контент */
-main {
-  position: relative;
+/* Разделы с фоном */
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-/* Разделы - круговая навигация */
-.sections-wrapper {
-  width:100%;
-  height:auto;
-  perspective:1000px;
+/* Фоновые изображения */
+.section.lokats {
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
 }
-.sections-container {
-  width:100%;
-  height:auto;
+.section.nevesty {
+    background-image: url('https://images.unsplash.com/photo-1520974739277-7b7d9d7e9b3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
 }
-.section-item {
-  position:absolute;
-  top:50%;
-  left:50%;
-   transform-origin:center center;
-   transition:.5s all ease-in-out;
-   cursor:pointer;
+.section.jenixa {
+    background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+}
+.section.gosti {
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+}
+.section.agencies {
+    background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position:center; 
+}
+.section.catering {
+    background-image:url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size:cover; 
+}
+.section.cars {
+    background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size:cover; 
+}
+.section.registration {
+   background-color:#fff; 
+   opacity:.9; 
+}
 
-   /* Размеры и расположение - управляются через JS или CSS переменные */
-}
-/* Установка углов для каждого раздела через CSS переменные или вручную */
-.section-item:nth-child(1) { --angle:-60deg; }
-.section-item:nth-child(2) { --angle:-30deg; }
-.section-item:nth-child(3) { --angle:0deg; }
-.section-item:nth-child(4) { --angle:30deg; }
-.section-item:nth-child(5) { --angle:60deg; }
-
-/* Стиль для карточек внутри разделов */
-section {
-    margin-bottom:50px;
-    position:relative;
-}
-section h2 {
-    font-family:'Anton', sans-serif; /* шрифт для заголовков разделов */
-    font-size:2em;
-    text-align:center;
-    margin-bottom:20px;
-    color:#ffd700; 
-}
-.section-card-container {
-    display:flex;
-    flex-wrap:no-wrap; /* чтобы карточки не переносились */
-    justify-content:center;
-    align-items:center;
-
-    position:absolute; /* чтобы располагать по кругу относительно родителя */
-    top:-50%;
-    left:-50%;
-    transform-origin:center center;
-
-}
-.section-card {
-    width:300px;
-    background-color:#222; 
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:-2px4px15px rgba(255,215,0,0.3);
-    transition:.3s transform, box-shadow, opacity;
-
-}
-.section-card:hover {
-    transform: scale(1.02);
-    box-shadow:-4px8px25px rgba(255,215,0,0.5);
-}
-.section-card img {
-    width:100%;
-    height:auto;
-    display:block;
-    object-fit:cover;
-}
-/* Карточки внутри разделов - шрифт Montserrat (уже подключен) */
-
-.card-title {
-   font-family:'Montserrat', sans-serif; 
-   font-weight:bold; 
-   font-size:.9em; 
-   margin-bottom:.5em; 
-}
-.card-desc {
-   font-family:'Montserrat', sans-serif; 
-   font-size:.8em; 
-   margin-bottom:.5em; 
+/* Заголовки внутри разделов */
+.section h2 {
+  margin-top:auto; 
 }
 
 /* Кнопки */
-button.btn-primary {
-   padding:12px24px ;
-   font-size:.9em ;
+button {
+  padding:12px 24px;
+  font-size:.9em; 
+  background-color:#6b46c1; 
+  color:#fff; 
+  border:none; 
+  border-radius:8px; 
+  cursor:pointer; 
+ transition:.3s all ease; 
+}
+
+button:hover {
+background-color:#553c9a; 
+}
+
+/* Вводы */
+input[type="date"],
+input[type="text"],
+input[type="email"],
+textarea {
+ width:auto; 
+ max-width:auto; 
+ padding:10px; 
+ margin-top:10px; 
+ border-radius:8px; 
+ border:none; 
+ box-shadow:none;  
+}
+
+/* Список гостей и карточки */
+.card-list {
+   display:flex; flex-wrap:flex-wrap; gap:15px; justify-content:center; }
+.card { flex-basis:auto; min-width:200px; max-width:auto; padding:15px; border-radius:10px; box-shadow:.05em .05em .2em rgba(0,0,0,.05);background:#fff;}
+h3 {margin-top:auto;font-size:.9em;margin-bottom:.5em;}
+p {font-size:.8em;}
+
+ul {list-style-type:none;padding-left:none;}
+li {margin-bottom:.5em;}
+/* Для кнопки удаления гостя */
+.guest-del-btn {
+   margin-left :10px ;
+   padding :5px ;
    border:none ;
-   border-radius:8px ;
-   background-color:#ffd700 ;
-   color:#222 ;
+   border-radius :5px ;
    cursor:pointer ;
-   transition:.3s all ease;}
-button.btn-primary:hover {opacity:.9;}
+   background-color:#e53e3e ;
+   color:#fff ;
+   font-size:.8em ;
+}
 </style>
 </head>
 <body>
 
-<!-- Заголовок сайта -->
-<div class='header-title'>WEDDING FUSS</div>
+<h1>Wedding Fuss</h1>
 
-<!-- Навигация стрелками -->
-<div class='nav-arrows'>
- <div class='arrow arrow-left' id='prev'><i class='fas fa-chevron-left'></i></div>
- <div class='arrow arrow-right' id='next'><i class='fas fa-chevron-right'></i></div>
+<!-- Блок выбора даты -->
+<div class="section">
+<h2>Выберите дату свадьбы:</h2>
+<input type="date" id="weddingDate" />
+<button onclick="showDate()">Показать выбранную дату</button>
+<p id="dateDisplay"></p>
 </div>
 
-<!-- Круговая навигация разделов -->
-<div class='sections-wrapper'>
- <div class='sections-container' id='sections'>
-   
-   <!-- Раздел Транспорт -->
-   <div class='section-item' data-index='0'>
-     <section id='transport'>
-       <h2>Транспорт</h2>
-       <div class='section-card-container'>
-         <div class='section-card'>
-           <a href="#transport"><img src='https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' alt='Транспорт'></a>
-           <div class='card-content'>
-             <div class='card-title'>Транспорт</div>
-             <!-- описание убрано по вашему запросу -->
-           </div>
-         </div>
-       </div>
-     </section>
-   </div>
+<!-- Раздел "Локации" -->
+<div class="section lokats">
+<h2>Локации</h2>
+<div class="card-list">
+<div class="card"><h3>Места проведения</h3><p>Добавьте описание или список мест.</p></div>
+</div>
+</div>
 
-   <!-- Раздел Декор -->
-   <div class='section-item' data-index='1'>
-     <section id='decor'>
-       <h2>Декор</h2>
-       <div class='section-card-container'>
-         <div class='section-card'>
-           <a href="#decor"><img src='https://i.pinimg.com/originals/27/02/16/27021666509319081.jpg' alt='Декор'></a>
-           <div class='card-content'>
-             <div class='card-title'>Декор</div>
-             <!-- описание можно добавить при необходимости -->
-           </div>
-         </div>
-       </div>
-     </section>
-   </div>
+<!-- Раздел "Всё для невесты" -->
+<div class="section nevesty">
+<h2>Всё для невесты</h2>
+<div class="card-list">
+<div class="card"><h3>Обувь и платье</h3><p>Подбор и советы по выбору.</p></div>
+</div>
+</div>
 
-   <!-- Раздел Невеста -->
-   <div class='section-item' data-index='2'>
-     <section id='bride'>
-       <h2>Невеста</h2>
-       <div class='section-card-container'>
-         <div class='section-card'>
-           <a href="#bride"><img src='https://i.pinimg.com/originals/56/30/18/563018698064163.jpg' alt='Невеста'></a>
-           <div class='card-content'>
-             <div class='card-title'>Невеста</div>
-             <!-- описание можно добавить при необходимости -->
-           </div>
-         </div>
-       </div>
-     </section>
-   </div>
+<!-- Раздел "Всё для жениха" -->
+<div class="section jenixa">
+<h2>Всё для жениха</h2>
+<div class="card-list">
+<div class="card"><h3>Костюмы и аксессуары</h3><p>Идеи и рекомендации.</p></div>
+</div>
+</div>
 
-   <!-- Раздел Кейтеринг -->
-   <div class='section-item' data-index='3'>
-     <section id='catering'>
-       <h2>Кейтеринг</h2>
-       <div class='section-card-container'>
-         <div class='section-card'>
-           <a href="#catering"><img src='https://i.pinimg.com/originals/17/95/81/179581103891020263.jpg' alt='Кейтеринг'></a>
-           <div class='card-content'>
-             <div class='card-title'>Кейтеринг</div>
-           </div>
-         </div>
-       </div>
-     </section>
-   </div>
+<!-- Раздел "Список гостей" -->
+<div class="section gosti">
+<h2>Список гостей</h2>
+<input type="text" id="guestInput" placeholder="Добавьте гостя" />
+<button onclick="addGuest()">Добавить гостя</button>
+<ul id="guestList"></ul>
+</div>
 
-   <!-- Раздел Жених -->
-   <div class='section-item' data-index='4'>
-     <section id='groom'>
-       <h2>Жених</h2>
-       <div class='section-card-container'>
-         <div class='section-card'>
-           <a href="#groom"><img src='https://i.pinimg.com/originals/11/10/70/1110700326853690373.jpg' alt='Жених'></a>
-           <div class='card-content'>
-             <div class='card-title'>Жених</div>
-           </div>
-         </div>
-       </div>
-     </section>
-   </div>
+<!-- Раздел "Свадебные агентства" -->
+<div class="section agencies">
+<h2>Свадебные агентства</h2>
+<div class="card-list">
+<div class="card"><h3>Агентство А</h3><p>Контакты и услуги.</p></div>
+<div class="card"><h3>Агентство Б</h3><p>Контакты и услуги.</p></div>
+<!-- Можно добавить больше карточек -->
+</div>
+</div>
 
-   <!-- Раздел Локация -->
-   <div class='section-item' data-index='5'>
-     <section id="location">
-       <h2>Локация</h2>
-       <<div class ='section-card-container'>
-         <!-- Здесь был неправильный синтаксис и лишние теги, исправлено ниже -->
-         <!-- Пример содержимого для этого раздела:
-              Идеальное место для вашего торжества.
-          -->
-         <!-- Если нужен блок с изображением или другим содержимым — добавьте сюда -->
+<!-- Раздел "Кейтеринг" -->
+<div class="section catering">
+<h2>Кейтеринг</h2>
+<div class="card-list">
+<div class="card"><h3>Поставщик X</h3><p>Меню и контакты.</p></div>
+<!-- Можно добавить больше карточек -->
+</div>
+</div>
 
-         <!-- Пример с изображением или текстом (раскомментируйте и адаптируйте по необходимости) -->
+<!-- Раздел "Автомобили" -->
+<div class="section cars">
+<h2>Автомобили</h2>
+<div class="card-list">
+<div class="card"><h3>Автопрокат Y</h3><p>Модели и цены.</p></div>
+<!-- Можно добавить больше карточек -->
+</div>
+</div>
 
-         <!--<a href="#location"><img src ="https://i.pinimg.com/originals/38/70/98/387098530489062973.jpg" alt ="Локация"></a>-->
-         
-         <!--<p>Идеальное место для вашего торжества.</p>-->
-         
-        --> 
-        <!-- Или оставьте пустым, если контент не нужен -->
+<!-- Раздел "Регистрация свадьбы" -->
+<div class="section registration">
+<h2>Регистрация свадьбы</h2>
+<form id='registrationForm'>
+<label for='name'>Ваше имя:</label><br/>
+<input type='text' id='name' required/><br/><br/>
+<label for='email'>Email:</label><br/>
+<input type='email' id='email' required/><br/><br/>
+<label for='date'>Желаемая дата:</label><br/>
+<input type='date' id='regDate' required/><br/><br/>
+<button type='submit'>Отправить заявку</button>
+<p id='regStatus'></p>
+</form>
+</div>
 
-        <!-- Ниже пример исправленного блока с текстом -->
+<!-- Раздел "Обратная связь / Контакты" -->
+<div class='section'>
+<h2>Контакты и обратная связь</h2>
+<p>Email для связи:<br/> wedding@example.com </p>
+<p>Телефон:<br/> +7 (123)456-78-90 </p>
 
-        Идеальное место для вашего торжества.
+<form id='contactForm'>
+<label for='contactName'>Имя:</label><br/>
+<input type='text' id='contactName' required/><br/><br/>
+<label for='contactEmail'>Email:</label><br/>
+<input type='email' id='contactEmail' required/><br/><br/>
+<label for='message'>Сообщение:</label><br/>
+<textarea id='message' rows='4' required></textarea><br/><br/>
+<button type='submit'>Отправить сообщение</button>
+<p id='contactStatus'></p>
+</form>
+</div>
 
-       </-div> 
-     </section> 
-   </.div>
-
-</ div > <!-- закрытие sections-container и sections-wrapper -->
-
-<!-- Можно добавить скрипты для навигации и вращения круговой навигации -->
+<!-- Советы -->
+<div class='section'>
+<h2>Советы по подготовке к свадьбе:</h2>
+<ul>
+<li>Начинайте подготовку заранее.</li>
+<li>Обсуждайте все детали с партнером.</li>
+<li>Создайте список гостей и рассчитайте бюджет.</li>
+<li>Выберите место проведения и закажите услуги заранее.</li>
+<li>Не забывайте о мелочах — украшениях, фотографах и т.д.</li>
+</ul>
+</div>
 
 <script>
-// Здесь можно реализовать логику переключения разделов и вращения
-// Например:
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-const sections = document.querySelectorAll('.section-item');
+// Функция отображения выбранной даты
+function showDate() {
+	const date = document.getElementById('weddingDate').value;
+	if(date) {
+		document.getElementById('dateDisplay').innerText = 'Запланированная дата:' + date;
+	} else {
+		document.getElementById('dateDisplay').innerText = 'Пожалуйста, выберите дату.';
+	}
+}
 
-let currentIndex = 0;
-
-function updateSections
+// Список гостей
+function addGuest() {
+	const guestInput = document.getElementById('guestInput');
+	const guestName = guestInput.value.trim
