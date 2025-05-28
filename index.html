@@ -84,19 +84,18 @@ main {
 .sections-container {
   width:100%;
   height:auto;
-  
 }
 .section-item {
   position:absolute;
   top:50%;
   left:50%;
-  
    transform-origin:center center;
    transition:.5s all ease-in-out;
    cursor:pointer;
 
-   /* Размеры и расположение - будут управляться через JS */
+   /* Размеры и расположение - управляются через JS или CSS переменные */
 }
+/* Установка углов для каждого раздела через CSS переменные или вручную */
 .section-item:nth-child(1) { --angle:-60deg; }
 .section-item:nth-child(2) { --angle:-30deg; }
 .section-item:nth-child(3) { --angle:0deg; }
@@ -121,7 +120,7 @@ section h2 {
     justify-content:center;
     align-items:center;
 
-    position:absolute; /* чтобы располагать по кругу */
+    position:absolute; /* чтобы располагать по кругу относительно родителя */
     top:-50%;
     left:-50%;
     transform-origin:center center;
@@ -171,7 +170,6 @@ button.btn-primary {
    cursor:pointer ;
    transition:.3s all ease;}
 button.btn-primary:hover {opacity:.9;}
-
 </style>
 </head>
 <body>
@@ -246,7 +244,6 @@ button.btn-primary:hover {opacity:.9;}
            <a href="#catering"><img src='https://i.pinimg.com/originals/17/95/81/179581103891020263.jpg' alt='Кейтеринг'></a>
            <div class='card-content'>
              <div class='card-title'>Кейтеринг</div>
-             <!-- описание можно добавить при необходимости -->
            </div>
          </div>
        </div>
@@ -262,7 +259,6 @@ button.btn-primary:hover {opacity:.9;}
            <a href="#groom"><img src='https://i.pinimg.com/originals/11/10/70/1110700326853690373.jpg' alt='Жених'></a>
            <div class='card-content'>
              <div class='card-title'>Жених</div>
-             <!-- описание можно добавить при необходимости -->
            </div>
          </div>
        </div>
@@ -271,13 +267,43 @@ button.btn-primary:hover {opacity:.9;}
 
    <!-- Раздел Локация -->
    <div class='section-item' data-index='5'>
-     <section id='#location'>
+     <section id="location">
        <h2>Локация</h2>
-       <div class='section-card-container'>
-         <div class='section-card'>
-           <a href="#location"><img src ='https://i.pinimg.com/originals/38/70/98/387098530489062973.jpg' alt ='Локация'></a >
-          <divclass =' card -content ' >
-             <!-- исправлены теги ниже -->
-             <!--<pclass> --> 
-             Идеальное место для вашего торжества.
-             <!-- закрываем
+       <<div class ='section-card-container'>
+         <!-- Здесь был неправильный синтаксис и лишние теги, исправлено ниже -->
+         <!-- Пример содержимого для этого раздела:
+              Идеальное место для вашего торжества.
+          -->
+         <!-- Если нужен блок с изображением или другим содержимым — добавьте сюда -->
+
+         <!-- Пример с изображением или текстом (раскомментируйте и адаптируйте по необходимости) -->
+
+         <!--<a href="#location"><img src ="https://i.pinimg.com/originals/38/70/98/387098530489062973.jpg" alt ="Локация"></a>-->
+         
+         <!--<p>Идеальное место для вашего торжества.</p>-->
+         
+        --> 
+        <!-- Или оставьте пустым, если контент не нужен -->
+
+        <!-- Ниже пример исправленного блока с текстом -->
+
+        Идеальное место для вашего торжества.
+
+       </-div> 
+     </section> 
+   </.div>
+
+</ div > <!-- закрытие sections-container и sections-wrapper -->
+
+<!-- Можно добавить скрипты для навигации и вращения круговой навигации -->
+
+<script>
+// Здесь можно реализовать логику переключения разделов и вращения
+// Например:
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const sections = document.querySelectorAll('.section-item');
+
+let currentIndex = 0;
+
+function updateSections
