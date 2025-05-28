@@ -3,250 +3,316 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>wedding fuss</title>
-<!-- Подключение современного шрифта -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  /* Общие стили */
-  body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f0f4f8; /* мягкий светлый фон в стиле 2025 */
-    color: #333;
-    line-height: 1.6;
-  }
+<title>Идеальный сайт</title>
+<meta name="description" content="Описание вашего сайта для поисковых систем" />
+<meta name="keywords" content="ключевые слова, для SEO" />
+<meta name="author" content="Ваше имя или компания" />
 
-h1 {
-  text-align: center;
-  color: #4a5568;
-  font-weight: 600;
-  font-size: 2.5em;
-  margin-bottom: 10px;
+<!-- Open Graph для соцсетей -->
+<meta property="og:title" content="Идеальный сайт" />
+<meta property="og:description" content="Описание вашего сайта для соцсетей" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://вашсайт.ru/" />
+<meta property="og:image" content="https://вашсайт.ru/images/preview.jpg" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Подключение стилей -->
+<link rel="stylesheet" href="styles.css" />
+
+<!-- Иконки соцсетей -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Google Fonts (оптимизация загрузки) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<style>
+/* Общие стили */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
 }
 
+/* Контейнеры */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Хедер */
+header {
+  background-color: #222;
+  padding: 20px 0;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+nav ul.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+nav ul.menu li a:hover {
+  text-decoration: underline;
+}
+
+/* Основные секции */
+.section {
+  padding: 60px 0;
+}
 h2 {
   text-align: center;
-  color: #4a5568;
-  font-weight: 600;
-  font-size: 1.8em;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
-
-/* Общие стили для разделов с фоном */
-.section {
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: rgba(255,255,255,0.8); /* полупрозрачный фон для читаемости */
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-/* Фоновые изображения для каждого раздела по классам */
-.section.lokats {
-    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-}
-.section.nevesty {
-    background-image: url('https://images.unsplash.com/photo-1520974739277-7b7d9d7e9b3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-}
-.section.jenixa {
-    background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-}
-.section.gosti {
-    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-}
-.section.agencies {
-    background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-}
-.section.catering {
-    background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position:center; 
-}
-.section.cars {
-    background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-    background-size:cover; 
-}
-.section.registration {
-   /* Можно оставить без фона или добавить свой */
-   background-color:#fff; 
-   opacity:.9; 
-}
-
-/* Заголовки внутри разделов */
-.section h2 {
-  margin-top:auto; 
+p {
+  max-width:600px;
+  margin:auto;
 }
 
 /* Кнопки */
-button {
-  padding:12px 24px;
-  font-size:.9em; 
-  background-color:#6b46c1; 
-  color:#fff; 
-  border:none; 
-  border-radius:8px; 
-  cursor:pointer; 
- transition:.3s all ease; 
+.btn-primary {
+  display:inline-block;
+  background-color:#007BFF;
+  color:#fff;
+  padding:10px20px;
+  border:none;
+  border-radius:4px;
+  text-decoration:none;
+}
+.btn-primary:hover {
+    background-color:#0056b3;
 }
 
-button:hover {
-background-color:#553c9a; 
+/* Услуги список */
+.services-list {
+    display:flex; 
+    justify-content:center; 
+    gap:20px; 
+    list-style:none; 
+    flex-wrap:wrap; 
+    padding-left:0; 
+}
+.services-list li {
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    width:auto; 
+}
+.services-list img {
+    width:150px; 
+    height:auto; 
+    border-radius:8px; 
+}
+.services-list span {
+    margin-top:10px; 
 }
 
-/* Вводы */
-input[type="date"],
-input[type="text"] {
- width:auto; 
- max-width:auto; 
- padding:10px; 
- margin-top:10px; 
- border-radius:8px; 
- border:none; 
- box-shadow:none;  
+/* Контакты и карта */
+.contacts-info p {
+    margin-bottom:10px; 
+}
+iframe {
+    margin-top:20px; 
+    border-radius:8px; 
 }
 
-/* Список гостей и карточки */
-.card-list {
-   display:flex; flex-wrap:flex-wrap; gap:15px; justify-content:center; }
-.card { flex-basis:auto; min-width:200px; max-width:auto; padding:15px; border-radius:10px; box-shadow:.05em .05em .2em rgba(0,0,0,.05);background:#fff;}
-h3 {margin-top:auto;font-size:.9em;margin-bottom:.5em;}
-p {font-size:.8em;}
+/* Социальные сети */
+.social-icons {
+    margin-top:20px; 
+    display:flex; 
+    gap:15px; 
+    justify-content:center; 
+}
+.social-icons a {
+    color:#555; 
+    font-size:24px; 
+    transition:.3s ease-in-out; 
+}
+.social-icons a:hover {
+    color:#000; 
+}
+
+/* Отзывы */
+#reviews blockquote {
+    max-width:800px; 
+    margin:auto; 
+    font-style:none; /* убираем курсив по желанию */  
+    font-size:1.2em;  
+    padding-left:20px;  
+}
+/* Футер */
+footer {
+background-color:#222;color:#fff;padding:20px;margin-top:auto;text-align:center;}
+footer a {color:#fff;text-decoration:none;}
+footer a:hover {text-decoration underline;}
 </style>
+
 </head>
 <body>
 
-<h1>wedding fuss</h1>
+<header>
+<div class="container header-container">
+<h1 class='logo'><a href="#">Мой сайт</a></h1>
+<nav>
+<ul class='menu'>
+<li><a href="#home">Главная</a></li>
+<li><a href="#about">О нас</a></li>
+<li><a href="#services">Услуги</a></li>
+<li><a href="#contact">Контакты</a></li>
+</ul>
+</nav>
+</div>
+</header>
 
-<!-- Блок выбора даты -->
-<div class="section">
-<h2>Выберите дату свадьбы:</h2>
-<input type="date" id="weddingDate" />
-<button onclick="showDate()">Показать выбранную дату</button>
-<p id="dateDisplay"></p>
-</div>
+<main>
 
-<!-- Раздел "Локации" -->
-<div class="section lokats">
-<h2>Локации</h2>
-<div class="card-list">
-<div class="card"><h3>Места проведения</h3><p>Добавьте описание или список мест.</p></div>
+<!-- Главный раздел -->
+<section id='home' class='section'>
+<div class='container'>
+<h2>Добро пожаловать на наш сайт!</h2>
+<p>Здесь вы найдете всю необходимую информацию о наших услугах и компании.</p>
+<a href="#contact" class='btn-primary'>Связаться с нами</a>
 </div>
-</div>
+</section>
 
-<!-- Раздел "Всё для невесты" -->
-<div class="section nevesty">
-<h2>Всё для невесты</h2>
-<div class="card-list">
-<div class="card"><h3>Обувь и платье</h3><p>Подбор и советы по выбору.</p></div>
+<!-- О нас -->
+<section id='about' class='section'>
+<div class='container'>
+<h2>О нашей компании</h2>
+<p>Мы предоставляем лучшие услуги в своей области. Наш опыт и профессионализм гарантируют качество.</p>
 </div>
-</div>
+</section>
 
-<!-- Раздел "Всё для жениха" -->
-<div class="section jenixa">
-<h2>Всё для жениха</h2>
-<div class="card-list">
-<div class="card"><h3>Костюмы и аксессуары</h3><p>Идеи и рекомендации.</p></div>
-</div>
-</div>
-
-<!-- Раздел "Список гостей" -->
-<div class="section gosti">
-<h2>Список гостей</h2>
-<input type="text" id="guestInput" placeholder="Добавьте гостя" />
-<button onclick="addGuest()">Добавить гостя</button>
-<ul id="guestList"></ul>
-</div>
-
-<!-- Раздел "Свадебные агентства" -->
-<div class="section agencies">
-<h2>Свадебные агентства</h2>
-<div class="card-list">
-<div class="card"><h3>Агентство А</h3><p>Контакты и услуги.</p></div>
-<div class="card"><h3>Агентство Б</h3><p>Контакты и услуги.</p></div>
-<!-- Можно добавить больше карточек -->
-</div>
-</div>
-
-<!-- Раздел "Кейтеринг" -->
-<div class="section catering">
-<h2>Кейтеринг</h2>
-<div class="card-list">
-<div class="card"><h3>Поставщик X</h3><p>Меню и контакты.</p></div>
-<!-- Можно добавить больше карточек -->
-</div>
-</div>
-
-<!-- Раздел "Автомобили" -->
-<div class="section cars">
-<h2>Автомобили</h2>
-<div class="card-list">
-<div class="card"><h3>Автопрокат Y</h3><p>Модели и цены.</p></div>
-<!-- Можно добавить больше карточек -->
-</div>
-</div>
-
-<!-- Раздел "Регистрация свадьбы" -->
-<div class="section registration">
-<h2>Регистрация свадьбы</h2>
-<p>Информация о регистрации, документы и процедуры.</p>
-<!-- Можно добавить форму или инструкции -->
-</div>
-
-<!-- Советы -->
-<div class="section">
-<h2>Советы по подготовке</h2>
-<ul>
-<li>Начинайте подготовку заранее.</li>
-<li>Обсуждайте все детали с партнером.</li>
-<li>Создайте список гостей и рассчитайте бюджет.</li>
-<li>Выберите место проведения и закажите услуги заранее.</li>
-<li>Не забывайте о мелочах — украшениях, фотографах и т.д.</li>
+<!-- Услуги -->
+<section id='services' class='section'>
+<div class='container'>
+<h2>Наши услуги</h2>
+<ul class='services-list'>
+<li><img src='images/service1.jpg' alt='Услуга 1' loading='lazy'><span>Услуга 1</span></li>
+<li><img src='images/service2.jpg' alt='Услуга 2' loading='lazy'><span>Услуга 2</span></li>
+<li><img src='images/service3.jpg' alt='Услуга3' loading='lazy'><span>Услуга3</span></li>
 </ul>
 </div>
+</section>
 
+<!-- Контактная секция -->
+<section id='contact' class='section'>
+<div class='container'>
+<h2>Свяжитесь с нами</h2>
+
+<!-- Форма обратной связи -->
+<form action="/submit-form" method="POST" id='contact-form'>
+<!-- Защита от CSRF — реализуйте на сервере (например, токен) -->
+<!--<input type='hidden' name='_csrf' value='TOKEN'>-->
+
+<label for='name'>Имя:</label>
+<input type='text' id='name' name='name' required maxlength='50' />
+
+<label for='email'>Email:</label>
+<input type='email' id='email' name='email' required maxlength='100'/>
+
+<label for='message'>Сообщение:</label>
+<textarea id='message' name='message' required maxlength='2000'></textarea>
+
+<!-- CAPTCHA (пример) -->
+<!--<div class=\"g-recaptcha\" data-sitekey=\"ВАШ_КЛЮЧ\"></div>-->
+  
+<!-- Кнопка отправки -->
+<button type='submit' class='btn-primary'>Отправить</button>
+</form>
+
+<!-- Контактные данные и карта -->
+<div class='contacts-info'>
+<p>Телефон: +7 (123) 456-78-90</p>
+<p>Email: info@mysite.ru</p>
+
+<!-- Встроенная карта Google Maps с lazy loading -->
+<iframe src=\"https://www.google.com/maps/embed?pb=...\" width=\"100%\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>
+</div>
+
+<!-- Социальные сети с aria-label для доступности -->
+<div class=\"social-icons\">
+<a href=\"#\" aria-label=\"Facebook\"><i class=\"fab fa-facebook-f\"></i></a>
+<a href=\"#\" aria-label=\"Instagram\"><i class=\"fab fa-instagram\"></i></a>
+<a href=\"#\" aria-label=\"Twitter\"><i class=\"fab fa-twitter\"></i></a>
+</div>
+
+</div>
+</section>
+
+<!-- Отзывы клиентов (доверие) -->
+<section id=\"reviews\" class=\"section\">
+<div class=\"container\">
+<h2>Отзывы наших клиентов</h2>
+
+<blockquote>«Отличная компания! Очень доволен результатом.»</blockquote>
+
+</div>
+</section>
+
+</main>
+
+<!-- Подвал сайта -->
+<footer>
+<div class=\"container footer-container\">
+&copy;2024 Мой сайт. Все права защищены.
+<p><a href=\"#privacy\">Политика конфиденциальности</a></p>
+
+<!-- Скрипты аналитики (Google Analytics) - вставьте свой код сюда для отслеживания посещений --> 
+<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X\"></script>
 <script>
-// Функция отображения выбранной даты
-function showDate() {
-	const date = document.getElementById('weddingDate').value;
-	if(date) {
-		document.getElementById('dateDisplay').innerText = 'Запланированная дата: ' + date;
-	} else {
-		document.getElementById('dateDisplay').innerText = 'Пожалуйста, выберите дату.';
-	}
-}
-
-// Список гостей
-function addGuest() {
-	const guestInput = document.getElementById('guestInput');
-	const guestName = guestInput.value.trim();
-	if(guestName === "") {
-		alert("Пожалуйста, введите имя гостя");
-		return;
-	}
-	const li = document.createElement('li');
-	li.innerText = guestName;
-
-	const delBtn = document.createElement('button');
-	delBtn.innerText = "Удалить";
-	delBtn.style.marginLeft = "10px";
-	delBtn.onclick = function() { this.parentElement.remove(); };
-	
-	li.appendChild(delBtn);
-	document.getElementById('guestList').appendChild(li);
-	guestInput.value="";
-}
+// Инициализация Google Analytics
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-XXXXXX-X');
 </script>
 
+<!-- Важно, что все внешние скрипты подключены по HTTPS -->
+
+</div>
+</footer>
+
+<!-- Скрипты для отправки формы через AJAX -->
+<script>
+// Обработчик отправки формы
+document.getElementById('contact-form').addEventListener('submit', function(e){
+e.preventDefault();
+
+const formData = new FormData(this);
+
+fetch('/submit-form', {
+method:'POST',
+body : formData,
+headers:{ 'Accept':'application/json'}
+})
+.then(response => response.json())
+.then(data => { alert('Спасибо за ваше сообщение!'); this.reset();})
+.catch(error => { alert('Произошла ошибка. Попробуйте позже.'); console.error(error);});
+});
+</script>
+
+<!-- Можно подключить дополнительные скрипты или библиотеки по необходимости -->
+
+<!-- Конец документа -->
 </body>
 </html>
